@@ -39,3 +39,60 @@ include_once 'templates/topo.php';
 <?php
 include_once 'TEMPLATES/rodape.php';
 ?>
+<style>
+
+    body {
+        font-family: Arial, sans-serif;
+        background-color: #f4f4f4;
+        margin: 0;
+        padding: 0;
+    }
+    footer {
+        position: fixed;
+        left: 0;
+    }
+    .conteudo {
+        position: relative;
+        top: 25px;
+        background: #ffffff;
+        border-radius: 8px;
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        padding: 20px;
+        max-width: 600px;
+        margin: auto;
+    }
+
+    h1 {
+        color: #343a40;
+        margin-bottom: 20px;
+    }
+
+    label {
+        font-weight: bold;
+        margin-top: 10px;
+        display: block;
+    }
+
+    input[type="text"], input[type="email"], textarea {
+        width: 70%;
+        padding: 10px;
+        margin-top: 5px;
+        border: 1px solid #ced4da;
+        border-radius: 4px;
+        box-sizing: border-box;
+    }
+
+    input[type="submit"] {
+        background-color: slategray;
+        color: #ffffff;
+        border: none;
+        padding: 10px;
+        border-radius: 4px;
+        cursor: pointer;
+    }
+
+    input[type="submit"]:hover {
+        background-color: #0056b3;
+    }
+
+</style>
