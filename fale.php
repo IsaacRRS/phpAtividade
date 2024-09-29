@@ -4,14 +4,14 @@ include_once 'templates/topo.php';
 
 <div class="conteudo">
     <h1>Fale Conosco</h1>
-    <form action="fale.php" method="post">
+    <form action="?pg=fale" method="post"> 
 
         <label>Nome: </label><br>
-        <input type="text" name="nome"><br>
+        <input type="text" name="nome" required><br>
         <label>Email: </label><br>
-        <input type="text" name="email"><br>
+        <input type="email" name="email" required><br> 
         <label>Mensagem: </label><br>
-        <input type="textarea" name="mensagem"><br><br>
+        <textarea name="mensagem" required></textarea><br><br>
         <input type="submit" value="Enviar">
 
     </form><br>
@@ -24,21 +24,31 @@ include_once 'templates/topo.php';
         $mensagem = isset($_POST["mensagem"]) ? $_POST["mensagem"] : '';
 
         if (!empty($nome) && !empty($email) && !empty($mensagem)) {
+            
 
+            /* 
             echo "O envio foi um sucesso!<br><br>";
-
             echo "Seu nome é {$nome}<br>";
             echo "Seu email é {$email}<br>";
-            echo "Sua mensagem foi {$mensagem}<br>";
+            echo "Sua mensagem foi {$mensagem}<br>";*/
+
+
+
+
+            header('Location: ?pg=sucesso'); 
+            exit;
             
         } else {
             echo "Preencha corretamente.<br>";
         }
     }
 ?>
+</div>
+
 <?php
-include_once 'TEMPLATES/rodape.php';
+include_once 'templates/rodape.php';
 ?>
+
 <style>
 
     body {
